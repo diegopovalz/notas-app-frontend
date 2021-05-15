@@ -1,5 +1,7 @@
 # NotasApp
 
+Proyecto Front-end para la [Aplicación de Notas con Spring](https://github.com/diegopovalz/notas-spring-gradle), usando la guía de estilo [04-06](https://angular.io/guide/styleguide#style-04-06).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
 
 ## Development server
