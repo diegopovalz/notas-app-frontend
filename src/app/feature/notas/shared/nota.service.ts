@@ -13,10 +13,16 @@ export class NotaService {
   constructor(private http: HttpClient) { }
 
   darNotas(): Observable<Nota[]> {
-    return this.http.get<Nota[]>(`${this.baseUrl}/nota/`)
+    return this.http.get<Nota[]>(`${this.baseUrl}/`)
+  }
+
+  darNota(id: number): Observable<Nota> {
+    return this.http.get<Nota>(`${this.baseUrl}/${id}`)
   }
 
   nuevaNota(nota: Nota): Observable<Nota> {
-    return this.http.post<Nota>(`${this.baseUrl}`, nota)
+    return this.http.post<Nota>(`${this.baseUrl}/nota`, nota)
   }
+
+
 }
