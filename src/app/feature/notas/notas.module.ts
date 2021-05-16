@@ -5,6 +5,7 @@ import { NotasRoutingModule } from './notas-routing.module';
 import { NotasComponent } from './notas.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CrearNotaComponent } from './crear-nota/crear-nota.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { CrearNotaComponent } from './crear-nota/crear-nota.component';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     NotasRoutingModule,
     SharedModule
   ],

@@ -8,6 +8,7 @@ import { ListaNotasComponent } from './feature/notas/lista-notas/lista-notas.com
 import { NotasModule } from './feature/notas/notas.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NotasRoutingModule } from './feature/notas/notas-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule,
     NotasModule,
     CoreModule,
-    HttpClientModule
+    HttpClientModule,
+    NotasRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

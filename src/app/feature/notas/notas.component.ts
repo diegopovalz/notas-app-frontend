@@ -20,9 +20,6 @@ export class NotasComponent implements OnInit {
   ngOnInit() {
     //this.conseguirNotas()
     console.log('it works!')
-    this.exito = true;
-    this.titulo = 'Éxito'
-    this.mensaje = 'Sí se pudieron conseguir las notas'
   }
 
   public conseguirNotas(): void {
@@ -33,6 +30,7 @@ export class NotasComponent implements OnInit {
       this.mensaje = 'Sí se pudieron conseguir las notas'
     }), (error: HttpErrorResponse) => {
       alert(error)
+      this.exito = false
       this.titulo = 'Error'
       this.mensaje = 'No se pudieron conseguir las notas'
     }
