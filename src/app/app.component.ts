@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   constructor(private servicioNota: NotaService) { }
 
   ngOnInit() {
-    this.conseguirNotas()
+    //this.conseguirNotas()
   }
 
   public conseguirNotas(): void {

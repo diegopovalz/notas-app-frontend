@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotasComponent implements OnInit {
 
+  public titulo: string = 'Prueba'
+  public mensaje: string = 'Prueba de Alerta'
+
   constructor() { }
 
   ngOnInit(): void {

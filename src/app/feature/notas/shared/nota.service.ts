@@ -22,6 +22,4 @@ export class NotaService {
   nuevaNota(nota: Nota): Observable<Nota> {
     return this.http.post<Nota>(`${env.apiUrl}/nota`, nota)
   }
-
-
 }
