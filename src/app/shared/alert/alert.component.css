@@ -1,3 +1,7 @@
 .alert {
   width: 350px;
+  position: relative;
+  top: 20vh;
+  left: 35vw;
+  width: 30%;
 }
