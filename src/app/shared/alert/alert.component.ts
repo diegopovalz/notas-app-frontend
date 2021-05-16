@@ -9,6 +9,7 @@ export class AlertComponent implements OnInit {
 
   @Input() titulo: string;
   @Input() mensaje: string;
+  @Input() exito: boolean;
 
   constructor() { }
 

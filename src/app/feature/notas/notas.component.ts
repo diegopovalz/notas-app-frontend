@@ -9,6 +9,7 @@ export class NotasComponent implements OnInit {
 
   public titulo: string = 'Prueba'
   public mensaje: string = 'Prueba de Alerta'
+  public exito: boolean = true;
 
   constructor() { }
 
