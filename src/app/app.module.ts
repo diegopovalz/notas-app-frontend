@@ -4,25 +4,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { ListaNotasComponent } from './feature/notas/lista-notas/lista-notas.component';
 import { NotasModule } from './feature/notas/notas.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
-import { NotasRoutingModule } from './feature/notas/notas-routing.module';
+import { AboutComponent } from './feature/about/about.component';
+import { AboutModule } from './feature/about/about.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ListaNotasComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    NotasModule,
+    AboutModule,
     AppRoutingModule,
     SharedModule,
-    NotasModule,
     CoreModule,
-    HttpClientModule,
-    NotasRoutingModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
