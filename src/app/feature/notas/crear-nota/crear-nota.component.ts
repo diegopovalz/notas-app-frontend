@@ -14,19 +14,17 @@ export class CrearNotaComponent implements OnInit {
 
   constructor(private service: NotaService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
 
-  }
-
-  saveNote() {
+  saveNote(): void {
     this.service.nuevaNota(this.nota)
   }
 
-  setDescripcion(event: any) {
+  setDescripcion(event: any): void {
     this.nota.descripcion = event.target.value
   }
 
-  setFecha(event: any) {
+  setFecha(event: any): void {
     this.nota.fecha = event.target.value
   }
 

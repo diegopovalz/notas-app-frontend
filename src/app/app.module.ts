@@ -7,7 +7,6 @@ import { SharedModule } from './shared/shared.module';
 import { NotasModule } from './feature/notas/notas.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
-import { AboutComponent } from './feature/about/about.component';
 import { AboutModule } from './feature/about/about.module';
 
 @NgModule({
@@ -17,7 +16,6 @@ import { AboutModule } from './feature/about/about.module';
   imports: [
     BrowserModule,
     NotasModule,
-    AboutModule,
     AppRoutingModule,
     SharedModule,
     CoreModule,
