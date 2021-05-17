@@ -1,22 +1,24 @@
 <div class="container-fluid">
-  <form>
+  <form [formGroup]="crearNotaForm">
     <div class="form-group">
       <label for="note-descripction" class="col-2 col-form-label">Fecha</label>
       <div class="col-6">
         <input class="form-control" type="date" [value]="currentDateValue" id="note-descripction"
-          (input)="setFecha($event)" autocomplete="off">
+          (input)="setFecha($event)" autocomplete="off" formControlName="controlFecha">
       </div>
     </div>
     <div class="form-group">
       <label for="note-descripction" class="col-2 col-form-label">Descripción</label>
       <div class="col-6">
         <input type="text" class="form-control" id="note-descripction" placeholder="Descripción"
-          (input)="setDescripcion($event)" autocomplete="off">
+          (input)="setDescripcion($event)" autocomplete="off" formControlName="controlDescripcion">
       </div>
     </div>
     <div class="form-group col-2">
-      <button class="btn btn-primary" (click)="saveNote()" [disabled]="!(nota.descripcion && nota.fecha)">Guardar
+      <button type="button" class="btn btn-primary" [disabled]="!(nota.descripcion && nota.fecha)"
+        (click)="saveNote()">Guardar
         nota</button>
     </div>
   </form>
 </div>
+<app-alert *ngIf="titulo && mensaje" [titulo]="titulo" [mensaje]="mensaje" [exito]="exito"></app-alert>

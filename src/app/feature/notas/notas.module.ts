@@ -6,6 +6,7 @@ import { NotasComponent } from './notas.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CrearNotaComponent } from './crear-nota/crear-nota.component';
 import { ListaNotasComponent } from './lista-notas/lista-notas.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { ListaNotasComponent } from './lista-notas/lista-notas.component';
   imports: [
     CommonModule,
     NotasRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     NotasComponent
