@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Nota } from '../shared/nota.model';
+import { NotaService } from '../shared/nota.service';
 
 @Component({
   selector: 'app-crear-nota',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrearNotaComponent implements OnInit {
 
-  constructor() { }
+  @Input('value') currentDateValue: string
+  nota: Nota = {}
+
+  constructor(private service: NotaService) { }
 
   ngOnInit(): void {
+
+  }
+
+  saveNote() {
+    this.service.nuevaNota(this.nota)
+  }
+
+  setDescripcion(event: any) {
+    this.nota.descripcion = event.target.value
+  }
+
+  setFecha(event: any) {
+    this.nota.fecha = event.target.value
   }
 
 }
